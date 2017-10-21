@@ -1,3 +1,14 @@
+#################################################################################################
+# Programmer: Chase Johnson                                                                     #
+# Date: 10/20/17                                                                                #
+# File Name: ExtractingNutrition.py                                                             #
+# Description:  Parses through the nutrition facts of an item on myfitnesspal.com.  Takes as    #
+#               parameters the url of the nutrition facts (obtained from searchForProductURL()  #
+#               in the findProductUrl.py file) and the nutrition item you want to find          #
+#               (ex: Calories)                                                                  #
+#                                                                                               #
+#################################################################################################
+
 import bs4 as bs
 import urllib.request
 
@@ -36,4 +47,4 @@ def getNutritionInfo(url, key):
     # Returns the value associated with the key given by the user
     return nutFacts.get(key)
 
-print(getNutritionInfo('http://www.myfitnesspal.com/food/calories/382905495', 'Calories'))
+# This is an example: print(getNutritionInfo('http://www.myfitnesspal.com/food/calories/382905495', 'Calories'))
