@@ -1,0 +1,12 @@
+function getYogurt(){
+    var yogurt = '';
+    for (i=0;i < document.getElementsByClassName('product-name').length;i++){
+        yogurt = yogurt + document.getElementsByClassName('product-name')[i].innerHTML + '\n';
+    }
+    return yogurt;
+}
+
+chrome.runtime.sendMessage({
+    action: "getSource",
+    source: getYogurt()
+});
