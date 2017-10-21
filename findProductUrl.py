@@ -33,4 +33,5 @@ def searchForProductURL(product):
     url = url.replace("/food/search", "")
     return(url + urlArr[0])
 
+# print(searchForProductURL("Peanut Butter"))
 # This is an example: print(searchForProductURL('Peanut Butter'))

@@ -20,7 +20,7 @@ def getNutritionInfo(url, key):
     soup = bs.BeautifulSoup(sauce, 'lxml')
 
     # Print the title of the page (the type of food we are dealing with)
-    print(soup.title.string)
+    # print(soup.title.string)
     arr = []
 
     # Make a list filled with all 'td' (Table Data) objects
@@ -46,5 +46,5 @@ def getNutritionInfo(url, key):
 
     # Returns the value associated with the key given by the user
     return nutFacts.get(key)
-
+# print(getNutritionInfo('http://www.myfitnesspal.com/food/calories/381378836', "Calories"))
 # This is an example: print(getNutritionInfo('http://www.myfitnesspal.com/food/calories/382905495', 'Calories'))
